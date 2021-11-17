@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Item {
+  id          Int     @id @default(autoincrement())
+  public_id   String
+  content     String  @db.Text
+  exposure    String  @default("never")
+  language    String
+  private     Boolean @default(false)
+  hasPassword Boolean @default(false)
+  created_at  BigInt
+  expire_at   BigInt?
+}
