@@ -1,10 +1,10 @@
 import memory from './memory';
-import planetscale from './planetscale';
+import database from './database';
 
 const backend = () => {
   switch (process.env.BACKEND) {
-    case 'planetscale':
-      return planetscale();
+    case 'database':
+      return database();
     case 'memory':
       return memory();
     default:

@@ -1,7 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-const planetscale = () => {
+const database = () => {
   return {
     get: async (id) => {
       return toObject(
@@ -55,4 +55,4 @@ const toObject = (data) => {
   );
 };
 
-export default planetscale;
+export default database;
