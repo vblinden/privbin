@@ -42,6 +42,9 @@ const database = () => {
               },
             ],
           },
+          orderBy: {
+            created_at: 'desc',
+          },
         })
       ).map((o) => toObject(o));
     },
