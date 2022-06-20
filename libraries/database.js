@@ -21,7 +21,7 @@ const database = () => {
           exposure: exposure,
           created_at: created_at,
           expire_at: expiration !== 'never' ? parseInt(created_at) + parseInt(expiration) : null,
-          hasPassword: password,
+          has_password: password,
           language: language,
           private: exposure === 'private',
         },

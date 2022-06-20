@@ -38,7 +38,7 @@ export default function Home() {
       const json = await response.json();
 
       setContent(json.content);
-      setHasPassword(json.hasPassword);
+      setHasPassword(json.has_password);
       setLanguage(json.language);
       setOriginalContent(json.content);
     })();
