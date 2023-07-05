@@ -1,0 +1,41 @@
+{% import "macros/link.html" as link %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Super minimal, simple and inexpensive 24/7 uptime monitoring service." />
+    <meta name="keywords" content="checkeroni, uptime, robot, checker, monitor, cheap, inexpensive" />
+    <meta name="author" content="vblinden" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Privbin</title>
+
+    <link rel="icon" type="image/svg+xml" href="/static/img/logo.svg">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=fira-mono:400,500,700" />
+
+    <link href="/static/css/app.css" rel="stylesheet">
+</head>
+
+<body class="antialiased">
+    <div class="text-center my-6 mx-4 py-10 px-4 sm:container sm:mx-auto">
+        <a>
+            <h1 class="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-1">
+                Privbin
+            </h1>
+        </a>
+
+        <main>
+            {% block content %}{% endblock content %}
+        </main>
+
+        <footer class="mt-5 text-gray-400">
+            <a href="https://github.com/vblinden/privbin" target="_blank" className="hover:text-gray-600" rel="noreferrer">
+                See source code on GitHub
+            </a>
+        </footer>       
+    </div>
+</body>
+
+</html>

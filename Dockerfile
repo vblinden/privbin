@@ -1,6 +1,6 @@
 FROM rust:1.70 as builder
 
-WORKDIR /senderoni
+WORKDIR /privbin
 
 COPY ./Cargo.lock .
 COPY ./Cargo.toml .
@@ -17,5 +17,7 @@ RUN touch -a -m ./src/lib.rs
 RUN cargo build --release
 
 FROM debian:stable-slim
-COPY --from=builder /senderoni/target/release/senderoni .
-CMD ["./senderoni"]
+COPY --from=builder /privbin/target/release/privbin .
+COPY --from=builder /privbin/static ./static	
+COPY --from=builder /privbin/templates ./templates
+CMD ["./privbin"]

@@ -1,0 +1,6 @@
+{% macro macro(href, description, class="", target="_self", lastChar="") %}
+<a href="{{ href }}" target="{{ target }}" rel="noreferrer"
+    class="text-primary-500 hover:text-primary-700 underline{% if class %} {{ class }}{% endif %}">{{
+    description
+    }}</a>{% if lastChar %}{{ lastChar }}{% endif %}
+{% endmacro macro %}

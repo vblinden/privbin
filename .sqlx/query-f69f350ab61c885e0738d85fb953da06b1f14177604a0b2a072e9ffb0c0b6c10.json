@@ -1,0 +1,20 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n        INSERT INTO items (id, content, exposure, language, private, password, created_at)\n        VALUES ($1, $2, $3, $4, $5, $6, $7)\n        ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Uuid",
+        "Text",
+        "Text",
+        "Text",
+        "Bool",
+        "Bool",
+        "Timestamptz"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "f69f350ab61c885e0738d85fb953da06b1f14177604a0b2a072e9ffb0c0b6c10"
+}

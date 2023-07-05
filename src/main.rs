@@ -1,6 +1,6 @@
 use std::net::TcpListener;
 
-use senderoni::{configuration::get_configuration, startup::run};
+use privbin::{configuration::get_configuration, startup::run};
 use sqlx::PgPool;
 
 #[tokio::main]
