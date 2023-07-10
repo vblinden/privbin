@@ -1,7 +1,4 @@
-use actix_web::{
-    web::{self, Redirect},
-    HttpResponse,
-};
+use actix_web::{web, HttpResponse};
 use chrono::Utc;
 use sqlx::PgPool;
 use tera::{Context, Tera};
